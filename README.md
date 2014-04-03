@@ -1,15 +1,15 @@
 Author: Matt Might
 Site:   http://matt.might.net/
 
-`sdiff`: S-Expression-aware diff
-================================
+`s-diff`: S-Expression-aware diff
+=================================
 
 
 For tools that output S-Expressions, shell scripts may want to know when
 the S-Expressions are equal, even if the text representing those S-Expressions
 are not equal.
 
-`sdiff <file1> <file2>` has exit status 0 if the `<file1>` and `<file2>` have
+`s-diff <file1> <file2>` has exit status 0 if the `<file1>` and `<file2>` have
 the same sequence of S-Expressions, modulo whitespace and comments, and 1
 otherwise.
 
@@ -24,4 +24,8 @@ With Racket installed, run:
 and to install locally into `~/bin`, run:
 
     make install
+
+To install in `/usr/local/bin`, run:
+
+    sudo make install-global
 

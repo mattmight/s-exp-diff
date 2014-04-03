@@ -1,13 +1,16 @@
-all: sdiff
+all: s-diff
 
 
-sdiff: sdiff.rkt
-	raco exe -o sdiff sdiff.rkt
+s-diff: s-diff.rkt
+	raco exe -o s-diff s-diff.rkt
 
-install:
-	cp -v sdiff ~/bin/
+install: s-diff
+	cp -v s-diff ~/bin/
+
+install-global: s-diff
+	cp -v s-diff /usr/local/bin/
 
 clean:
-	rm -rfv sdiff
+	rm -rfv s-diff
 
 
